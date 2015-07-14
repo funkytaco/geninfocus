@@ -1,0 +1,74 @@
+<head>
+    <meta charset="utf-8">
+    <title>github/funkytaco - meteor application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body><br><br>
+    <div class="ui grid">
+        <div class="computer tablet only row">
+            <div class="ui inverted fixed menu navbar page grid">
+                <a href="" class="brand item">Project Name</a>
+                <a href="" class="active item">Home</a>
+                <a href="" class="item">About</a>
+                <a href="" class="item">Contact</a>
+                <a class="ui dropdown item">Dropdown
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="item">Action</div>
+                    <div class="item">Another action</div>
+                    <div class="item">Something else here</div>
+                    <div class="ui divider"></div>
+                    <div class="item">Seperated link</div>
+                    <div class="item">One more seperated link</div>
+                  </div>
+                </a>
+                <div class="right menu">
+                    <div href="" class="item">
+                        <meteor-include src="loginButtons"></meteor-include>
+                    </div>
+                    <a href="" class="active item">Default</a>
+                    <a href="" class="item">Static top</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile only row">
+            <div class="ui fixed inverted navbar menu">
+                <a href="" class="brand item">Project Name</a>
+                <div class="right menu open">
+                    <a href="" class="menu item">
+                        <i class="reorder icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ui vertical navbar menu">
+                <a href="" class="active item">Home</a>
+                <a href="" class="item">About</a>
+                <a href="" class="item">Contact</a>
+                <div class="ui item">
+                    <div class="text">Dropdown</div>
+                    <div class="menu">
+                        <a class="item">Action</a>
+                        <a class="item">Another action</a>
+                        <a class="item">Something else here</a>
+                        <a class="ui aider"></a>
+                        <a class="item">Seperated link</a>
+                        <a class="item">One more seperated link</a>
+                      </div>
+                </div>
+                <div class="menu">
+                    <a href="" class="item">
+                        <meteor-include src="loginButtons"></meteor-include>
+                    </a>
+                    <a href="" class="active item">Default</a>
+                    <a href="" class="item">Static top</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- angular - do not remove below this line //-->
+    <div ui-view class="container-fluid"></div>
+    <!-- end angular - do not remove above this line //-->
+</body>

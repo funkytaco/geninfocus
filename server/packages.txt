@@ -1,0 +1,29 @@
+accounts-facebook                     1.0.4  Login service for Facebook accounts
+accounts-password                     1.1.1  Password support for accounts
+accounts-twitter                      1.0.4  Login service for Twitter accounts
+accounts-ui                           1.1.5  Simple templates to add login widgets to an app
+angular:angular-material              0.9.0-rc3* Google Material design written for AngularJs (official repo)
+angularui:angular-google-maps         2.1.0* angular-google-maps (official)
+angularui:angular-ui-router           0.2.14* angular-ui-router (official): Flexible routing with nested views in AngularJS
+angularutils:pagination               0.7.0  Magical automatic pagination for anything in AngularJS
+email                                 1.0.6  Send email messages
+less                                  1.0.14  The dynamic stylesheet language
+meteor-platform                       1.2.2  Include a standard set of Meteor packages in your app
+planettraining:material-design-icons  0.0.4* Material design icons from google
+tmeasday:publish-counts               0.3.9  Publish the count of a cursor, in real time
+urigo:angular                         0.8.8* The simplest no-conflict way to use AngularJS with Meteor, Meteorite and Atmosphere Smart Packages.
+
+
+actual:
+
+accounts-facebook            1.0.4  Login service for Facebook accounts
+accounts-twitter             1.0.4  Login service for Twitter accounts
+accounts-ui                  1.1.5  Simple templates to add login widgets to an app
+angular:angular-material     0.9.4  Google Material design written for AngularJs (official repo)
+angularui:angular-ui-router  0.2.15  angular-ui-router (official): Flexible routing with nested views in AngularJS
+autopublish                  1.0.3  Publish the entire database to all clients
+flemay:less-autoprefixer     1.0.1  The dynamic stylesheet language + Autoprefixer
+insecure                     1.0.3  Allow all database writes by default
+meteor-platform              1.2.2  Include a standard set of Meteor packages in your app
+semantic:ui                  1.12.1_1  Official Semantic UI Integration for Meteor
+urigo:angular                0.8.10  The simplest no-conflict way to use AngularJS with Meteor, Meteorite and Atmosphere Smart Packages.
