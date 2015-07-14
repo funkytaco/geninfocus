@@ -11,7 +11,13 @@
 **Run Meteor locally for development**
 
 If you don't have Meteor installed, visit http://meteorjs.com
+
+Now run meteor:
+
 `meteor`
+
+This will perform some operations which will take about 30 seconds on average before your web stack is available.
+
 
 **Develop locally on a full stack!**
 
