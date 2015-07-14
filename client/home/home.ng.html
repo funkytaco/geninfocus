@@ -13,7 +13,7 @@
                     <div class="content">
                     <div class="header">Register Now For Fall 2015</div>
                     <p ng-hide="$root.currentUser || $root.loggingIn">You are not signed in.</p>
-                    <p ng-show="$root.currentUser">Welcome, {{currentUser}}!</p>
+                    <p ng-show="$root.currentUser">Welcome, {{currentUser.emails[0].address}}!</p>
                     <p><a href="/register" class="ui blue button">Register Your Child &raquo;</a></p>
                     </div>
                     </div>
