@@ -21,6 +21,12 @@ Visit `http://localhost:3000/` for local development.
 
 Meteor includes a web server, database (MongoDB) and packages that help speed up development.
 
+**About AngularJS**
+
+Meteor apps don't normally support AngularJS, but this support was added via the *urigo:angular* package.
+
+NOTE: All angular files must end in `.ng.html` so that Meteor recognizes it as an Angular document and not regular HTML file.
+
 **About Semantic UI**
 
 http://semantic-ui.com/introduction/integrations.html
