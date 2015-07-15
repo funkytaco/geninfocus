@@ -17,8 +17,10 @@ angular.module("myapp").config(['$urlRouterProvider', '$stateProvider', '$locati
     have a "web page":
 
         * /home
+        * /registration
 
-    NOTE: Create a directory in `client` for each page. i.e. client/home.
+    NOTE: Create a directory in `client` for each page. i.e. client/home. See
+    the code below for more details.
 
     ***/
 
