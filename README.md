@@ -1,4 +1,6 @@
-# geninfocus
+# geninfocus Wiki
+https://github.com/funkytaco/geninfocus/wiki
+
 
 **Clone the project**
 
