@@ -38,3 +38,6 @@ NOTE: All angular files must end in `.ng.html` so that Meteor recognizes it as a
 http://semantic-ui.com/introduction/integrations.html
 
 A CSS framework used for layout and components with make UI/UX simpler, semantic, pretty, and clean.
+
+**Youtube Videos related to this project**
+[#1) Installing The Project](https://www.youtube.com/watch?v=B0qSEI9GXow)
