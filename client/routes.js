@@ -22,12 +22,24 @@ angular.module("myapp").config(['$urlRouterProvider', '$stateProvider', '$locati
 
     ***/
 
+    /* AngularJS stateProvider - see Angular docs */
     $stateProvider
-      .state('home', {
+
+        /* /home URI */
+        .state('home', {
         url: '/home',
         templateUrl: 'client/home/home.ng.html',
         controller: 'HomeCtrl'
-      });
+        })
 
-    $urlRouterProvider.otherwise("/home");
+        /* /registration URI */
+        .state('registration', {
+        url: '/registration',
+        templateUrl: 'client/registration/registration.ng.html',
+        controller: 'RegistrationCtrl'
+        });
+
+        /* catchall for URLs which don't exist */
+        $urlRouterProvider.otherwise("/home");
+
   }]);

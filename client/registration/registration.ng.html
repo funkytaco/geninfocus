@@ -1,0 +1,32 @@
+<!-- pages must end in .ng.html to be treated as AngularJS code by Angular-Meteor //-->
+<div class="ui page grid main">
+    <div class="row">
+        <div class="column padding-reset">
+            <div class="ui one column grid">
+                <div class="column">
+                    <h1 class="ui huge header">Generation InFocus Registration</h1>
+                    <p ng-show="$root.currentUser">Welcome, {{currentUser.emails[0].address}}! Please register here.</p>
+
+                </div>
+            </div>
+            <div class="ui two column grid">
+              <div class="column">
+                <div class="ui raised segment">
+                  <a href="/registration" class="ui red ribbon label">Registration</a>
+                  <span>Sign up now for Fall 2015</span>
+                  <p></p>
+                  <a href="/parents" class="ui blue ribbon label">Parents</a> About Our Programs
+                  <p></p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="ui segment">
+                  <a href="/feedback" class="ui teal right ribbon label">Program Feedback</a>
+                  <p>"I love this program!"</p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+</div>
