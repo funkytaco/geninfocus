@@ -40,4 +40,6 @@ http://semantic-ui.com/introduction/integrations.html
 A CSS framework used for layout and components with make UI/UX simpler, semantic, pretty, and clean.
 
 **Youtube Videos related to this project**
-[#1) Installing The Project](https://www.youtube.com/watch?v=B0qSEI9GXow)
+
+ - [#1) Installing The Project](http://youtu.be/B0qSEI9GXow)
+ - [#2) Adding a template and controller file for a URL & Mobile testing in Google Chrome](http://youtu.be/gEcZ_wrrTvk)
