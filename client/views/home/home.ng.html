@@ -4,9 +4,16 @@
         <div class="column padding-reset">
             <div class="ui one column grid">
                 <div class="column">
-                    <h1 class="ui huge header">Generation InFocus Registration</h1>
-                    <p ng-show="$root.currentUser">Welcome, {{currentUser.emails[0].address}}! Please register here.</p>
-
+                    <h1 class="ui huge header">Generation InFocus Home</h1>
+                    <div class="ui ignored icon message">
+                    <i class="info letter icon"></i>
+                    <div class="content">
+                    <div class="header">Register Now For Fall 2015</div>
+                    <p ng-hide="$root.currentUser || $root.loggingIn">You are not signed in.</p>
+                    <p ng-show="$root.currentUser">Welcome, {{currentUser.emails[0].address}}!</p>
+                    <p><a href="/registration" ng-cloak ng-class="$root.currentUser ? 'ui blue button': 'ui disabled button'">Register Your Child &raquo;</a></p>
+                    </div>
+                    </div>
                 </div>
             </div>
             <div class="ui two column grid">
