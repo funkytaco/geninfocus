@@ -13,7 +13,7 @@
                       </div>
                       <div class="column">
                           <div ng-if="$root.currentUser && children.length > 0">
-                              <p  class="ui blue button">Children: <a href="/account/children">({{children.length}})</a></p>
+                              <p  class="ui button"><a href="/account/children">My Children:({{children.length}})</a></p>
                           </div>
                       </div>
                     </div>
@@ -23,7 +23,7 @@
                     <div class="ui ignored icon message">
                     <i class="info letter icon"></i>
                     <div class="content">
-                    <div class="header">Register Now For Fall 2015</div>
+                    <div class="header" ng-show="children.length == 0">Register Now</div>
                     <p ng-hide="$root.currentUser || $root.loggingIn">You are not signed in.</p>
                     <p ng-show="$root.currentUser && children.length == 0">You must add your child to this account before they can register.
                     </p>
@@ -31,13 +31,16 @@
                     </div>
                     </div>
                     <div class="ui hidden clearing divider"></div>
-
                     <div class="ui one column grid" ng-if="$root.currentUser && children.length > 0">
+                        <div class="column">
                         <div class="ui raised segment">
-                        <h3 class="ui dividing blue header">Register Here</h3>
-                    <iframe src="https://docs.google.com/forms/d/1GxXfBZmUJCMYIMqRhwb5Nn-_SGjMjglAn0kPhw9bxy4/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-                </div>
+                        <h3 class="ui dividing blue header">Register Your Child</h3>
+                            <meteor-include src="insertRegistrationForm" child="joe">
+                            </meteor-include>
+                        </div>
+                        </div>
                     </div>
+
 
                 </div>
             </div>

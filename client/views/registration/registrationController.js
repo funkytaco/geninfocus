@@ -1,19 +1,16 @@
 angular.module("myapp").controller("RegistrationCtrl", ['$scope', '$meteor', '$rootScope', '$state',
-  function($scope, $meteor, $rootScope, $state){
+    function($scope, $meteor, $rootScope, $state){
 
+        $scope.$meteorSubscribe('Children');
+        $scope.children = $meteor.collection(Children);
 
+        this.children =  $scope.children;
 
-      $scope.$meteorSubscribe('Children');
-      $scope.children = $meteor.collection(Children);
-
-
-    function enableDropdowns() {
+        /** Semantic UI Javascript - see docs **/
+        function enableDropdowns() {
         $('.ui.dropdown')
-        .dropdown()
-        ;
-    }
+            .dropdown();
+        }
+        enableDropdowns();
 
-
-    enableDropdowns();
-
-}]);
+    }]);
