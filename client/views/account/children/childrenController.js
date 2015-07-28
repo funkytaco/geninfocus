@@ -44,6 +44,7 @@ angular.module("myapp").controller("AccountChildrenCtrl", ['$scope', '$meteor', 
         $scope.children.remove();
     };
 
+    /** Semantic UI JS - see docs **/
     function enableDropdowns() {
         $('.ui.dropdown')
             .dropdown();
@@ -58,7 +59,6 @@ angular.module("myapp").controller("AccountChildrenCtrl", ['$scope', '$meteor', 
         $('.ui.checkbox.radio')
             .checkbox();
     }
-
 
     enableDropdowns();
     enableCheckboxes();
