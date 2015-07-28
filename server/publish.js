@@ -9,3 +9,9 @@ Meteor.publish("Children", function () {
     var currentUserId = this.userId;
     return Children.find({id: currentUserId });
 });
+
+/* Publish the Mongo collection */
+Meteor.publish("Registration", function () {
+    var currentUserId = this.userId;
+    return Children.find({id: currentUserId });
+});
