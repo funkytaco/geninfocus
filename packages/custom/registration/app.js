@@ -18,12 +18,12 @@ Registration.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Registration.menus.add({
-    title: 'registration example page',
+    title: 'registration',
     link: 'registration example page',
     roles: ['authenticated'],
     menu: 'main'
   });
-  
+
   Registration.aggregateAsset('css', 'registration.css');
 
   /**
