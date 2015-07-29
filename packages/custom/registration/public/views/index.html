@@ -1,6 +1,82 @@
-<div class="" data-ng-controller="RegistrationController">
+<div class="ui page grid main" data-ng-controller="RegistrationController as registration">
   <h1>Example view from your new awesome package</h1>
   <h2>Package: {{package.name}}</h2>
+      <div class="row">
+          <div class="column padding-reset">
+              <div class="ui one column grid">
+                  <div class="column">
+                      <h1 class="ui huge header">Generation InFocus Registration</h1>
+                      <div class="ui two column grid">
+                        <div class="column">
+                            <div  ng-show="registration.registrationVars.user.email">
+                            <i class="info icon"></i> logged in as {{registration.registrationVars.user.email}}
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div ng-if="registration.registrationVars.authenticated && children.length > 0">
+                                <p  class="ui blue button">Children: <a href="/account/children">({{children.length}})</a></p>
+                            </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="ui ignored icon message">
+                      <i class="info letter icon"></i>
+                      <div class="content">
+                      <div class="header">Register Now For Fall 2015 ... test: {{registration.registrationVars}}</div>
+                      <p  ng-show="!registration.registrationVars.authenticated">You are not signed in.</p>
+                      <p ng-show="registration.registrationVars.authenticated && children.length == 0">You must add your child to this account before they can register.
+                      </p>
+                      <p ng-if="registration.registrationVars.authenticated && children.length == 0"><a href="/account/children" class="ui blue button">Add Your Child &raquo;</a></p>
+                      </div>
+                      </div>
+                      <div class="ui hidden clearing divider"></div>
+                      <div class="ui one column grid" ng-if="registration.registrationVars.authenticated && children.length > 0">
+                          <div class="column">
+
+                          <div class="ui raised segment">
+                          <h3 class="ui dividing blue header">Register AutoForm</h3>
+                              Insert a book.
+                              <meteor-include src="insertBookForm">
+                              </meteor-include>
+                          </div>
+                          </div>
+                      </div>
+                      <div class="ui one column grid" ng-if="registration.registrationVars.authenticated && children.length > 0">
+                          <div class="ui raised segment">
+                          <h3 class="ui dividing blue header">Register Here</h3>
+                      <iframe src="https://docs.google.com/forms/d/1GxXfBZmUJCMYIMqRhwb5Nn-_SGjMjglAn0kPhw9bxy4/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                  </div>
+              </div>
+
+                  </div>
+              </div>
+              <div class="ui two column grid">
+                <div class="column">
+                  <div class="ui raised segment">
+                    <a href="/registration" class="ui red ribbon label">Registration</a>
+                    <span>Sign up now for Fall 2015</span>
+                    <p></p>
+                    <a href="/parents" class="ui blue ribbon label">Parents</a> About Our Programs
+                    <p></p>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="ui segment">
+                    <a href="/feedback" class="ui teal right ribbon label">Program Feedback</a>
+                    <p>"I love this program!"</p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+      </div>
+
+      <!-- temp //-->
+
+  Testing ngVar: {{test}}
+
   <ol>
     <li>
       <a href="/api/registration/example/anyone" target="_self">Server route that anyone can access</a>
@@ -23,5 +99,10 @@
   </br>
   <h3><a href="http://learn.mean.io">Documentation</a></h3>
   </br>
-</div>
+  <!-- temp //-->
 
+
+
+
+
+</div>
