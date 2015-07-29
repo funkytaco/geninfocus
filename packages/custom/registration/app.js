@@ -19,7 +19,7 @@ Registration.register(function(app, auth, database) {
   //We are adding a link to the main menu for all authenticated users
   Registration.menus.add({
     title: 'Registration',
-    link: 'registration example page',
+    link: 'registration index page',
     roles: ['authenticated'],
     menu: 'main'
   });

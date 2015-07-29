@@ -18,14 +18,8 @@ Children.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Children.menus.add({
-    title: 'children',
-    link: 'children example page',
-    roles: ['authenticated'],
-    menu: 'main'
-  });
-  Children.menus.add({
-    title: 'Add A Child',
-    link: 'children example page',
+    title: 'Children',
+    link: 'children index page',
     roles: ['authenticated'],
     menu: 'main'
   });

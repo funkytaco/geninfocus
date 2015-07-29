@@ -6,5 +6,9 @@ angular.module('mean.registration').config(['$stateProvider',
       url: '/registration/example',
       templateUrl: 'registration/views/index.html'
     });
+    $stateProvider.state('registration index page', {
+      url: '/registration',
+      templateUrl: 'registration/views/index.html'
+    });
   }
 ]);
