@@ -17,12 +17,22 @@ Registration.register(function(app, auth, database) {
   Registration.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
+  console.log('Auth', auth);
+
+
   Registration.menus.add({
     title: 'Registration',
     link: 'registration index page',
     roles: ['authenticated'],
     menu: 'main'
-  });
+    });
+
+    Registration.menus.add({
+      title: 'Registration',
+      link: 'registration index page nouser',
+      menu: 'main'
+      });
+
 
   Registration.aggregateAsset('css', 'registration.css');
 
