@@ -23,6 +23,12 @@ Children.register(function(app, auth, database) {
     roles: ['authenticated'],
     menu: 'main'
   });
+  Children.menus.add({
+    title: 'Add A Child',
+    link: 'children example page',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
 
   Children.aggregateAsset('css', 'children.css');
 
