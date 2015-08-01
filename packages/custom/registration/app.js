@@ -20,16 +20,18 @@ Registration.register(function(app, auth, database) {
   console.log('Auth', auth);
 
 
+  // User is redirected to main account page
   Registration.menus.add({
     title: 'Registration',
-    link: 'registration index page',
-    roles: ['authenticated'],
+    link: 'registration index',
+    roles: ['authenticated'], // Todo: redirect auth users?
     menu: 'main'
     });
 
+    // User must register
     Registration.menus.add({
       title: 'Registration',
-      link: 'registration index page nouser',
+      link: 'registration nouser',
       menu: 'main'
       });
 
