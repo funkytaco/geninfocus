@@ -5,44 +5,32 @@
  */
 var Module = require('meanio').Module;
 
-var Registration = new Module('registration');
+var Account = new Module('account');
 
 /*
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Registration.register(function(app, auth, database) {
+Account.register(function(app, auth, database) {
 
   //We enable routing. By default the Package Object is passed to the routes
-  Registration.routes(app, auth, database);
+  Account.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
-  console.log('Auth', auth);
-
-
-  // User is redirected to main account page
-  Registration.menus.add({
-    title: 'Registration',
-    link: 'registration index',
-    roles: ['authenticated'], // Todo: redirect auth users?
+  Account.menus.add({
+    title: 'Account',
+    link: 'account',
+    roles: ['authenticated'],
     menu: 'main'
-    });
-
-    // User must register
-    Registration.menus.add({
-      title: 'Registration',
-      link: 'registration nouser',
-      menu: 'main'
-      });
-
-
-  Registration.aggregateAsset('css', 'registration.css');
+  });
+  
+  Account.aggregateAsset('css', 'account.css');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback
     // Use this for saving data from administration pages
-    Registration.settings({
+    Account.settings({
         'someSetting': 'some value'
     }, function(err, settings) {
         //you now have the settings object
@@ -50,15 +38,15 @@ Registration.register(function(app, auth, database) {
 
     // Another save settings example this time with no callback
     // This writes over the last settings.
-    Registration.settings({
+    Account.settings({
         'anotherSettings': 'some value'
     });
 
     // Get settings. Retrieves latest saved settigns
-    Registration.settings(function(err, settings) {
+    Account.settings(function(err, settings) {
         //you now have the settings object
     });
     */
 
-  return Registration;
+  return Account;
 });

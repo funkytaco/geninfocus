@@ -1,0 +1,66 @@
+<div class="account-ctrl" data-ng-controller="AccountController as account">
+
+      {{account.main | json }}
+  <div class="row account-main">
+    <div class="panel panel-default">
+      <div class="panel-heading">Account Details</div>
+
+      <div class="panel-body">
+        <h4>{{ account.main.user || "Jane Doe" }} <a href="/account/update" class="btn btn-link">Edit</a></h4>
+        <p>
+            <span>Phone:</span>
+            <span>{{ account.main.phone }}</span>
+        </p>
+
+        <p>
+            <span>Email:</span>
+            <span>{{ account.main.email }}</span>
+        </p>
+
+        <p data-ng-repeat="addr in account.main.address">
+            <span>
+            {{ addr.street }} <br />
+            {{ addr.city }}, {{ addr.state }} {{ addr.zip }}
+            </span>
+        </p>
+
+
+      </div>
+    </div>
+  </div>
+
+  {{ account.children | json }}
+
+  <div class="row account-child">
+    <div>
+        <h4 class="col-md-8">Children</h4>
+        <button class="btn btn-primary pull-right">+ Add A Child</button>
+    </div>
+
+
+    <!-- Child -->
+    <div data-ng-repeat="child in account.children">
+
+      <div class="panel panel-default col-md-6 child">
+        <div class="panel-body">
+          <div>
+            <h4>{{ child.name }}</h4>
+            <p><span>Age:</span> <span>{{ child.age }}</span></p>
+            <p><span>Birth Date:</span> <span> {{ child.birthDate }}</span></p>
+          </div>
+
+          <div class="pull-right">
+            <button class="btn btn-default">Update</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /Child -->
+
+  </div>
+
+
+
+</div>
+
