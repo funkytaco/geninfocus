@@ -1,11 +1,27 @@
 'use strict';
 
-angular.module('mean.account').factory('Account', ['MeanUser',
-  function(MeanUser) {
+angular.module('mean.account').factory('Account', ['MeanUser', 'Children',
+  function(MeanUser, Children) {
 
     console.log("meanuser ", MeanUser, MeanUser.user.name);
+    /**
+    Account should depend on the following services:
+      * Children
+      * Contacts
+      * Addresses
+    **/
 
   var fakeAccount = {
+    user: MeanUser.user.name,
+    email: MeanUser.user.email,
+    children: Children.getChildren(),
+    //contacts: Contacts.getContacts(),
+    //addresses: Addresses.getAddresses()
+  };
+
+
+
+  var fakeAccountOld = {
     user: MeanUser.user.name,
     email: MeanUser.user.email,
     phone: "777-222-333",
@@ -17,19 +33,6 @@ angular.module('mean.account').factory('Account', ['MeanUser',
     }]
   };
 
-  var fakeChildren = [{
-    name: "Carol Jane",
-    age: "10",
-    sex: "female", //1,2
-    birthDate: "3/12/2005",
-    address: []
-  },{
-    name: "Billy Kidd",
-    age: "12",
-    sex: "male", //1,2
-    birthDate: "12/06/2001",
-    address: []
-  }];
 
 
     return {
@@ -40,7 +43,7 @@ angular.module('mean.account').factory('Account', ['MeanUser',
 
       },
       getChildren: function(){
-        return fakeChildren;
+        return fakeAccount.children;
       }
     };
 

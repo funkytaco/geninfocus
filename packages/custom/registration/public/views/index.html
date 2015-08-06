@@ -14,7 +14,8 @@
                 <div class="panel-body">
                     <p>Please create a new account!</p>
 
-                    <form class="form-horizontal" id="form-registration">
+                    <form name="formRegistration" id="form-registration" class="form-horizontal col-md-6" role="form" data-ng-submit="create(registration.$valid)" novalidate>
+
 
                         <div class="form-group">
                              <label for="guardianName" class="col-sm-2 control-label">Guardian Name</label>
