@@ -24,17 +24,9 @@ Registration.register(function(app, auth, database) {
   Registration.menus.add({
     title: 'Registration',
     link: 'registration index',
-    roles: ['authenticated'], // Todo: redirect auth users?
+    roles: ['anonymous', 'authenticated'],
     menu: 'main'
     });
-
-    // User must register
-    Registration.menus.add({
-      title: 'Registration',
-      link: 'registration nouser',
-      menu: 'main'
-      });
-
 
   Registration.aggregateAsset('css', 'registration.css');
 
