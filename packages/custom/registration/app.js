@@ -23,16 +23,9 @@ Registration.register(function(app, auth, database) {
   Registration.menus.add({
     title: 'Registration',
     link: 'registration index page',
-    roles: ['authenticated'],
+    roles: ['anonymous', 'authenticated'],
     menu: 'main'
     });
-
-    Registration.menus.add({
-      title: 'Registration',
-      link: 'registration index page nouser',
-      menu: 'main'
-      });
-
 
   Registration.aggregateAsset('css', 'registration.css');
 
