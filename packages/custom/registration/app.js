@@ -20,15 +20,20 @@ Registration.register(function(app, auth, database) {
   console.log('Auth', auth);
 
 
-  Registration.menus.add({
-    title: 'Registration',
-    link: 'registration index page',
-    roles: ['anonymous', 'authenticated'],
-    menu: 'main'
+    Registration.menus.add({
+        title: 'Registration',
+        link: 'registration index page',
+        roles: ['anonymous', 'authenticated'],
+        menu: 'main'
     });
 
-  Registration.aggregateAsset('css', 'registration.css');
+    Registration.aggregateAsset('css', 'registration.css');
 
+    /** formly **/
+    Registration.aggregateAsset('js', '../lib/api-check/dist/api-check.js', {weight: 1});
+    Registration.aggregateAsset('js', '../lib/angular-formly/dist/formly.js', {weight:2});
+    Registration.aggregateAsset('js', '../lib/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js', {weight:3});
+    
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback

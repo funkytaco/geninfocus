@@ -1,8 +1,8 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.registration').controller('RegistrationController', ['$scope', 'Global', 'MeanUser', 'Registration',
-  function($scope, Global, MeanUser, Registration) {
+angular.module('mean.registration').controller('RegistrationController', ['$scope', 'Global', 'Registration', 'formly', 'formlyBootstrap',
+    function($scope, Global, Registration, formly, formlyBootstrap) {
     $scope.global = Global;
     $scope.package = {
       name: 'registration'
